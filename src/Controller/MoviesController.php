@@ -6,13 +6,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class MoviesnameController extends AbstractController
+class MoviesController extends AbstractController
 {
-    #[Route('/moviesname', name: 'app_moviesname')]
+    #[Route('/movies', name: 'app_movies')]
     public function index(): Response
     {
-        return $this->render('moviesname/index.html.twig', [
-            'controller_name' => 'MoviesnameController',
+        return $this->json( [
+            'message' => 'Welcome to your new controller!',
+            'path' => 'src/Controller/MoviesController.php',
+
         ]);
     }
+
+
+
 }
